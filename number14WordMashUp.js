@@ -10,3 +10,27 @@
 // europe -> Europeurope
 //
 // Can you write a function that takes in a noun as a string, and returns her preferred band name written as a string?
+let bandName= "";
+
+const makeBandName = (str) => {
+  const arr= str.split("");
+  arr[0]= arr[0].toUpperCase() 
+  const firstHalfName= arr;
+  const lastLetter= firstHalfName.slice(-1);
+  console.log(lastLetter[0]);
+if( (firstHalfName[0].toLowerCase()) === lastLetter[0] ){
+  const endOfBandName= arr.slice(1);
+  const endOfBandNameJoined = endOfBandName.join("");
+  const firstHalfNameJoined = firstHalfName.join("");
+  console.log(endOfBandNameJoined);
+  bandName= "The" + " " + firstHalfNameJoined + endOfBandNameJoined;
+
+  } else {
+    bandName= "The" + " " + (arr.join(""));
+  }
+// console.log(arr[0].toLowerCase());
+
+return bandName;
+}
+
+makeBandName('alaska');

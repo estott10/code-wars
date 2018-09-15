@@ -8,7 +8,7 @@
 // Write function typeValidation that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
 
 const typeValidation=  (variable, typ) => {
-    if(variable === typ){
+    if(typeof(variable) === typ){
 
       return "true";
     } 
@@ -16,4 +16,4 @@ const typeValidation=  (variable, typ) => {
 
 }
 
-typeValidation("E", "d")
+typeValidation("e", "number");
